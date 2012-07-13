@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- Project Name: BaseLine -->
+<!-- Name: Justin M. Rowe -->
+<!-- Term Number: VFW 1207 -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Simple Project Management Schedule Tool" />
+		<meta name="keywords" content="Project Management, organizational, tool" />
+		<meta name="robots" content="nofollow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content"320" />
+		<title>BaseLine</title>
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<header><h1>BaseLine</h1></header>
+		<nav>
+			<a href="#" id="clear">Clear Stored Projects</a>
+			<a href="#" id="display">Display Projects</a>
+			<a href="addItem.html" id="addNew" style="display:none;">Add New Item</a>
+		</nav>	
+		<form action="#" method="post" id="projectForm" />
+			<fieldset>
+				<legend id="basic">Basic Project Information</legend>
+				<ul id="pinfo">
+					<li><label for="pname">Project Name:</label><input type="text" id="pname" /></li>
+					<li><label for="pmfname">First Name:</label><input type="text" id="pmfname" /></li>
+					<li><label for="pmlname">Last Name:</label><input type="text" id="pmlname" /></li>
+					<li><label for="sdate">Project Start Date:</label><input type="date" id="sdate" /></li>
+					<li><label for="fdate">Project Finish Date:</label><input type="date" id="fdate" /></li>
+				</ul>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend id="detail">Detailed Project Information</legend>
+				<ul>
+					<li>Applicable Tasks:
+						<ul>
+							<li><label for="contractstart">Contracting Start Date:</label><input type="date" id="contractstart" /></li>
+							<li><label for="contractaward">Contract Award Date:</label><input type="date" id="contractaward" /></li>
+							<li><label for="productionstart">Vendor Production Start Date:</label><input type="date" id="productionstart" /></li>
+							<li><label for="productionfinish">Vendor Production Finish Date:</label><input type="date" id="productionfinish" /></li>
+							<li><label for="teststart">Testing Start Date:</label><input type="date" id="teststart" /></li>
+							<li><label for="testfinish">Testing Finish Date:</label><input type="date" id="testfinish" /></li>
+							<li><label for="delivery">Delivery Date:</label><input type="date" id="delivery" /></li>
+						</ul>
+					</li>
+					<li>Non-Applicable Tasks:
+						<ul>
+							<li><input type="checkbox" checked value="Contracting N/A" id="nocontracting" /><label for="nocontracting">Contracting N/A</label></li>
+							<li><input type="checkbox" checked value="Testing N/A" id="notesting" /><label for="notesting">Testing N/A</label></li>
+							<li><input type="checkbox" checked value="Training N/A" id="notraining" /><label for="notraining">Training N/A</label></li>
+						</ul>
+					</li>
+					<li id="select">
+						<label for="product">Product Type</label>
+					</li>
+					<li><label for="notes">Notes:</label><textarea id="notes"></textarea></li>
+					<li><input type="hidden" value="true" /></li>
+				</ul>
+			</fieldset>
+			<input type="submit" value="Create Project!" id="submit" />
+		</form>
+		<script src="js/main.js" type="text/javascript"></script>
+	</body>
+</html>
